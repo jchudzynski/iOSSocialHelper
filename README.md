@@ -18,6 +18,15 @@ To use it you need to:
     [helper postMessage:@"Message" image:image  andURL:url forService:SLServiceTypeFacebook andTarget:self];
 }
 
+
+*forService argument accepts following types of values:
+NSString *const SLServiceTypeFacebook;
+NSString *const SLServiceTypeTwitter;
+NSString *const SLServiceTypeSinaWeibo;
+
+You can find more information about the framework in my blog post at:
+http://appzman.com/blog/?p=348
+
 Have fun!
 
 iOS 6 Social Framework Helper
