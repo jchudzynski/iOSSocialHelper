@@ -1,6 +1,25 @@
 iOSSocialHelper
 ===============
 
+Allows to use iOS 6 Social Framework to post messages using Facebook, Twitter and Wimbo.
+
+To use it you need to:
+1) Add Social Framework Library in a Link Binary With Libraries
+
+2)Add Import  #import <Social/Social.h> to a .pch file 
+
+3)Add SocialHelper.h and .m to your project
+4)Import a header #import "SocialHelper.h"
+5) Create action similar to:
+- (void)shareAction{
+    SocialHelper * helper = [[SocialHelper alloc]init];
+    UIImage * image = [UIImage imageNamed:@"default.png"];
+    NSURL *  url = [NSURL URLWithString:@"https://github.com/Janek2004/iOSSocialHelper"];
+    [helper postMessage:@"Message" image:image  andURL:url forService:SLServiceTypeFacebook andTarget:self];
+}
+
+Have fun!
+
 iOS 6 Social Framework Helper
 
 Copyright (c) 2012 Janusz Chudzynski.
